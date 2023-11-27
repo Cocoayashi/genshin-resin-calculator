@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Genshin Resin Calculator</title>
+  </head>
+  <body>
+    <nav>
+      <div id="webName">Genshin Resin Calculator</div>
+      <div id="nav-items">
+        <a href="index.html">Home</a>
+        <a href="characters.html">Characters</a>
+        <a href="calculator.html">Calculator</a>
+      </div>
+    </nav>
+
+    <form
+      action="characters.html"
+      method="get"
+      id="inputstuffs"
+      onsubmit="onSubmit(); return false;"
+      onreset="onReset();"
+    >
+    <div id="grid">
+        
+    <div id="basics">
+      <label for="Mora">Input how much Mora you have:</label>
+      <input
+        type="number"
+        name="Mora"
+        id="Mora"
+        class="large-input"
+        min="0"
+        max="99999999999"
+        oninput="this.value = Math.abs(this.value)"
+        value="0"
+      />
+   
+      <label for="Heroswit">Input how many Hero's Wit you have:</label>
+      <input
+        type="number"
+        name="Heroswit"
+        id="HerosWit"
+        class="large-input"
+        min="0"
+        max="9999"
+        oninput="this.value = Math.abs(this.value)"
+        value="0"
+      />
+   
+      <label for="Adventurers">Input how many Adventurers exp you have:</label>
+      <input
+        type="number"
+        name="Adventurers"
+        id="Adventurers"
+        class="large-input"
+        min="0"
+        max="99999"
+        oninput="this.value = Math.abs(this.value)"
+        value="0"
+      />
+    
+      <label for="BossDrops">Input how many boss drops you have so far:</label>
+      <input
+        type="number"
+        name="BossDrops"
+        id="BossDrops"
+        class="large-input"
+        min="0"
+        max="100"
+        oninput="this.value = Math.abs(this.value)"
+        value="0"
+      />
+    </div>
+   
+      <div id="character-level" class="level inputs">
+        <label for="level"
+          >Select what level your character currently is:</label
+        >
+        <select id="charlvl" class="select-input" name="level">
+          <option value="0/20">00/20</option>
+          <option value="20/20">20/20</option>
+          <option value="20/40">20/40</option>
+          <option value="40/40">40/40</option>
+          <option value="40/50">40/50</option>
+          <option value="50/50">50/50</option>
+          <option value="50/60">50/60</option>
+          <option value="60/60">60/60</option>
+          <option value="60/70">60/70</option>
+          <option value="70/70">70/70</option>
+          <option value="70/80">70/80</option>
+          <option value="80/80">80/80</option>
+          <option value="80/90">80/90</option>
+          <option value="90/90">90/90</option>
+        </select>
+        <br />
+        <label for="Level"
+          >Select what level you want your character to be:</label
+        >
+        <select
+          id="desiredcharlvl"
+          class="select-input"
+          name="Desired-Character-level"
+        >
+          <option value="0/20">00/20</option>
+          <option value="20/20">20/20</option>
+          <option value="20/40">20/40</option>
+          <option value="40/40">40/40</option>
+          <option value="40/50">40/50</option>
+          <option value="50/50">50/50</option>
+          <option value="50/60">50/60</option>
+          <option value="60/60">60/60</option>
+          <option value="60/70">60/70</option>
+          <option value="70/70">70/70</option>
+          <option value="70/80">70/80</option>
+          <option value="80/80">80/80</option>
+          <option value="80/90">80/90</option>
+          <option value="90/90">90/90</option>
+        </select>
+      </div>
+        <div id="talent-books">
+          <label for="green-books">Amount of current green talent books:</label>
+          <input type="number" min="0" value="0" max="999" id="green-books" name="green-books" class="large-input">
+          
+          <label for="blue-books">Amount of current blue talent books:</label>
+          <input type="number" min="0" value="0" max="999" id="blue-books" name="blue-books" class="large-input">
+          
+          <label for="purple-books">Amount of current purple talent books:</label>
+          <input type="number" min="0" value="0" max="999" id="purple-books" name="purple-books" class="large-input">
+        </div>
+      
+      <div id="current-talents" class="talents inputs">
+        <label for="talent1">Select the current NA talent level</label>
+        <select name="talent1" id="talent1" class="select-input">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        
+        <label for="talent2">Select the current Skill talent level</label>
+        <select name="talent2" id="talent2" class="select-input">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        
+        <label for="talent3">Select the current Burst talent level</label>
+        <select name="talent3" id="talent3" class="select-input">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+      </div>
+      <br />
+      <div id="desired-talents" class="talents inputs">
+        <label for="talent1final">Select the desired NA talent level</label>
+        <select name="talent1final" id="talent1final" class="select-input">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        
+        <label for="talent2final">Select the desired Skill talent level</label>
+        <select name="talent2final" id="talent2final" class="select-input">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        
+        <label for="talent3final">Select the desired Burst talent level</label>
+        <select name="talent3final" id="talent3final" class="select-input">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+      </div>
+      <div id="button">
+      <input type="reset" class="idk large-input" id="reset"/>
+      <input type="submit" class="idk large-input" id="submit"/>
+      <div style="color: aliceblue" id="resultContainer">Resin: </div>
+    </div>
+    
+    </form>
+    <br>
+    <script src="script.js"></script>
+    
+</div>
+<div class="runs">
+<div id="runs-mora" class="run"><span id="need-mora">You need 0 mora.</span></div>
+<div id="runs-xp" class="run"><span id="need-xp">You need 0 xp books.</span></div>
+<div id="runs-talents" class="run"><span id="need-talent-green">You need 0 green books.</span> <span id="need-talent-blue">You need 0 blue books.</span><span id="need-talent-purple">You need 0 purple books.</span></div>
+<div id="runs-boss" class="run"><span id="need-boss">You need 0 boss mats.</span></div>
+</div>
+  </body>
+</html>

@@ -1,0 +1,210 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url(Montserrat-VariableFont_wght.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+nav{
+    font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    background-color: rgb(16, 25, 66);
+    color: rgb(213, 224, 233);
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.8em;
+    height: 85px;
+    align-items: center;
+    padding: 10px;
+}
+
+#webName{
+    padding-left: 10px;
+    font-size: 2.7rem;
+}
+
+#nav-items {
+    padding-right: 50px;
+    word-spacing: 30px;
+}
+a {
+    color: inherit;
+}
+
+.column-center{
+
+    font-size: 2.3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(78, 97, 203);
+    padding: 0rem 2rem;
+    margin-top: 50px;
+}
+
+body{
+    background-color: rgb(13, 1, 46);
+}
+
+#inputstuffs{
+    line-height: 1.5em;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(213, 224, 233);
+    font-size: 1.5rem;
+    justify-content: center;
+
+}
+
+.large-input:hover .select-input:hover{
+    background-color: rgb(64, 64, 70, .8);
+}
+
+.large-input{
+    padding-left: 5px;
+    width: 100px; 
+    height: 25px;
+    font-size: 1rem; 
+    border-radius: 5px;
+    background-color: rgb(64, 64, 70);
+    color: aliceblue;
+}
+
+.select-input{
+    height: 3.5vh;
+    width: 4.5rem;
+    font-size: 0.6em;
+    border-radius: 20px;
+    font-size: 1rem;
+    display: flex;
+    justify-items: center;
+    text-align: center;
+    background-color: rgb(64, 64, 70);
+    color: aliceblue;
+}
+
+form{
+    padding-top: 1em;
+}
+
+.box{
+    display: flex;
+    margin-left: 40%;
+    margin-right: 40%;
+    width: 500px;
+    background-color: blanchedalmond;
+    border-radius: 5px;
+}
+
+#grid{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+#basics, #character-level, #current-talents, #desired-talents, #talent-books{
+    flex-grow: 1;
+    margin: .75%;
+    padding: 0% 2% 0% 2%;
+    background-color: rgb(16, 25, 66);
+    height: 37vh;
+    width: 73vh;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+#character-level{
+    justify-content: center;
+}
+
+#current-talents, #desired-talents{
+    width: 35vh;
+    justify-content: space-evenly;
+}
+
+.idk{
+    background-color: rgb(70, 100, 170);
+    width: auto;
+    height: 50%;
+    font-size: 1.5rem;
+    border: rgb(24, 93, 153) solid 2px;
+    color: rgb(203, 222, 237);
+    margin-right: 10%;
+}
+
+.idk:hover{
+    background-color: rgb(112, 136, 229);
+}
+
+#button{
+    display: grid;
+    grid-template-areas:
+    "reset"
+    "submit"
+    "result";
+    align-items: center;
+    flex-grow: .5;
+    width: 10vw;
+}
+
+#reset{
+    grid-area: reset;
+}
+
+#submit{
+    grid-area: submit;
+}
+
+#resultContainer{
+    grid-area: result;
+}
+
+#talent-books{
+    width: 20vw;
+}
+
+.runs{
+    display: flex;
+    gap: 10px;
+    margin: 10px 10px 50px 10px;
+   
+}
+
+.run{
+    width: 30vw;
+    height: 13vh;
+    border-radius: 6px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#runs-mora{
+    background-color: #d59b28;
+}
+
+#runs-xp{
+    background-color: #37a87b;
+}
+
+#runs-talents{
+    display: flex;
+    background-color: #1aa1b9;
+    align-content: space-evenly;
+}
+
+#runs-boss{
+    background-color: #cd583e;
+}
