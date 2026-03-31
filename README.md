@@ -1,8 +1,4 @@
-Link:
-https://cocoayashi.github.io/genshin-resin-calculator/calculator.html
-
-This is a calculator tailored for my favorite video game, "Genshin Impact".
-
-In it, you can calculate how much of each material you need in order to level up a character. 
-
-You can change the different starting points and end points for how levelled up you want your character to be.
+A single-page web application built with Vue.js and JavaScript.
+Calculates the total materials needed to level a character in Genshin Impact, including XP books, Mora, talent books, and boss drops. Users select their current and target levels and the app outputs exactly what they need.
+Tech Stack: Vue.js, JavaScript, HTML, CSS
+Live Demo: [https://cocoayashi.github.io/genshin-resin-calculator/calculator.html]
